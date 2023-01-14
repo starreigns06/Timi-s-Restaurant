@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/image/nigerian_foods_logo.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <title>Menu</title>
+  </head>
+  <style>
+    * {
+      background: #eaf6f6;
+    }
+    body {
+      padding: 10px;
+      box-sizing: border-box;
+      min-height: 100vh;
+      overflow-x: hidden;
+      justify-content: center;
+    }
+
+    .container {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-row-gap: 40px;
+    }
+    a {
+      color: black;
+    }
+    img {
+      width: 270px;
+      height: 270px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30px;
+      border: rgba(0, 0, 0, 0.579) solid 1px;
+      box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+    }
+    button {
+      background-color: red;
+      color: white;
+      border: rgba(8, 8, 8, 0.476) 2px solid;
+      padding: 15px;
+      margin-right: 50px;
+      border-radius: 15px;
+      width: 60%;
+      font-size: 1vw;
+    }
+
+    .desc {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .bod {
+      grid-column: 1 / span 3;
+    }
+    .bode {
+      grid-column: 2 / span 2;
+    }
+
+    .pie {
+      text-align: center;
+      font-size: 2.8vw;
+      animation-name: pie;
+      animation-duration: 3s;
+      /* animation-fill-mode: forwards; */
+      animation-iteration-count: infinite;
+    }
+    @keyframes pie {
+      0% {
+        color: black;
+      }
+      50% {
+        color: red;
+      }
+      100% {
+        color: black;
+      }
+    }
+    @media (max-width: 1199px) {
+      img {
+        width: 230px;
+        height: 230px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 30px;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 15px;
+        margin-right: 50px;
+        border-radius: 12px;
+        width: 50%;
+        font-size: 1.3vw;
+      }
+      .pie {
+        text-align: center;
+        font-size: 4vw;
+      }
+    }
+    @media (max-width: 799px) {
+      img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 30px;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      .gallery {
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 15px;
+        margin-right: 50px;
+        border-radius: 12px;
+        width: 50%;
+        font-size: 1.5vw;
+      }
+      .pie {
+        text-align: center;
+        font-size: 4vw;
+      }
+    }
+    @media (max-width: 620px) {
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25%;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      .gallery {
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 15px;
+        margin-right: 50px;
+        border-radius: 12px;
+        width: 50%;
+        font-size: 1.9vw;
+      }
+    }
+    @media (max-width: 507px) {
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25%;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      .gallery {
+        display: block;
+        justify-content: space-around;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 10px;
+        margin-right: 30px;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 2.3vw;
+      }
+    }
+    @media (max-width: 425px) {
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25%;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      .gallery {
+        display: block;
+        justify-content: space-around;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 10px;
+        margin-right: 30px;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 2.8vw;
+      }
+      body {
+        position: relative;
+        display: block;
+        margin-left: 10%;
+      }
+      .pie {
+        text-align: center;
+        font-size: 6vw;
+      }
+    }
+    @media (max-width: 280px) {
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25%;
+        border: rgba(0, 0, 0, 0.579) solid 1px;
+        box-shadow: 25px 10px 20px rgba(0, 0, 0, 0.437);
+      }
+      .gallery {
+        display: block;
+        justify-content: space-around;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: rgba(8, 8, 8, 0.476) 2px solid;
+        padding: 10px;
+        margin-right: 30px;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 4vw;
+      }
+      body {
+        position: relative;
+        display: block;
+        margin-left: 23%;
+      }
+      .pie {
+        text-align: center;
+        font-size: 7vw;
+      }
+    } ;
+  </style>
+  <body>
+    <div class="dough">
+      <h1 class="pie">&mdash;OUR MENU&mdash;</h1>
+    </div>
+    <div class="container">
+      <div class="gallery">
+        <img
+          src="/image/Chicken-Shawarma-Photo-credit-Taringa-e1528637269500.jpg"
+          alt=""
+        />
+        <div class="desc">
+          <button class="bod">Chicken Shawarma</button>
+          <button>&#8358;5,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img
+          src="/image/91393333-roast-chicken-legs-with-chips-and-vegetables.jpg"
+          alt=""
+        />
+        <div class="desc">
+          <button class="bod">Roasted Chicken and Chips</button>
+          <button>&#8358;10,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/15L9-cjPC5NGWzrwafLEGpA.jpeg" alt="" />
+        <div class="desc">
+          <button class="bod">Sunny Side Up Toast</button>
+          <button>&#8358;3,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/batter-fried-chicken-1200x1200-c.jpg" alt="" />
+        <div class="desc">
+          <button class="bod">Spicy Drumsticks</button>
+          <button>&#8358;8,500</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/highcompress_Kenix-Angus.png" alt="" />
+        <div class="desc">
+          <button class="bod">Timi's Patty</button>
+          <button>&#8358;3,200</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/pizza-recipe-1.jpg" alt="" />
+        <div class="desc">
+          <button class="bod">Vegetable Pizza</button>
+          <button>&#8358;15,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img
+          src="/image/depositphotos_90860054-stock-photo-egusi-soup-and-fufu-nigerian.jpg"
+          alt=""
+        />
+        <div class="desc">
+          <button class="bod">Fufu and Egusi</button>
+          <button>&#8358;4,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/How-to-Make-an-Omelette-main-1.jpg" alt="" />
+        <div class="desc">
+          <button class="bod">Omlette</button>
+          <button>&#8358;2,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/Untitled-design-1.png" alt="" />
+        <div class="desc">
+          <button class="bod">Plantain Chips</button>
+          <button>&#8358;5,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/chin-chin-website-edition-360x361.jpg" alt="" />
+        <div class="desc">
+          <button class="bod">Chin-Chin</button>
+          <button>&#8358;2,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img
+          src="/image/nigerian-chin-chin-recipe-easy-chin-chin-make-nigerian-chinchin-720x405.jpg"
+          alt=""
+        />
+        <div class="desc">
+          <button class="bod">Family Combo</button>
+          <button>&#8358;3,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="gallery">
+        <img src="/image/african-egg-roll-26.jpg" alt="" />
+        <div class="desc">
+          <button class="bod">Egg Roll</button>
+          <button>&#8358;5,000</button>
+          <button class="bode">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="class">
+        <a href="/html/homepage.html" class="anchor1">Main menu</a>
+      </div>
+    </div>
+  </body>
+</html>
